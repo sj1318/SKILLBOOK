@@ -1,0 +1,220 @@
+
+.skill-update {
+  margin-bottom: 32px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-update-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.form-title::before {
+  content: '✨';
+  font-size: 28px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.skill-form .form-group {
+  margin-bottom: 20px;
+}
+
+.skill-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.skill-form input,
+.skill-form textarea,
+.skill-form select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background: white;
+}
+
+.skill-form input:focus,
+.skill-form textarea:focus,
+.skill-form select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  transform: translateY(-1px);
+}
+
+.skill-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.form-actions .btn {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  min-width: 150px;
+}
+
+.skill-tips {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.tips-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0369a1;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tips-list li {
+  color: #0369a1;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.tips-list li::before {
+  content: '•';
+  color: #0284c7;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.error-message {
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #fecaca;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.error-message::before {
+  content: '⚠️';
+}
+
+.success-message {
+  background: #f0fdf4;
+  color: #16a34a;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #bbf7d0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.success-message::before {
+  content: '✅';
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .skill-update-card {
+    margin: 0 16px;
+  }
+  
+  .form-title {
+    font-size: 20px;
+  }
+  
+  .form-actions .btn {
+    width: 100%;
+  }
+  
+  .skill-tips {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-update-card {
+    padding: 20px;
+  }
+  
+  .form-title {
+    font-size: 18px;
+  }
+  
+  .skill-form input,
+  .skill-form textarea,
+  .skill-form select {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  
+  .tips-title {
+    font-size: 14px;
+  }
+  
+  .tips-list li {
+    font-size: 14px;
+  }
+}
